@@ -1,0 +1,91 @@
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff8a00, #8d113e);
+  transition: background 10s;
+}
+
+.contenedor:hover {
+  background: linear-gradient(to right, #56ccf2, #2f4bed);
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex-basis: 1 1 auto;
+}
+
+.contador {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  transition: transform 0.3s, font-size 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contador:hover {
+  transform: scale(1.1);
+}
+
+.contador.animado {
+  animation: cambiarTamaño 0.8s;
+}
+
+
+
+@keyframes cambiarTamaño {
+  0% {
+    font-size: 48px;
+  }
+  50% {
+    font-size: 52px;
+    transform: scale(1.2);
+  }
+  100% {
+    font-size: 48px;
+  }
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  width: 120px;
+  height: 40px; /* Añade un alto fijo a los botones */
+}
+
+.btn.iniciar,
+.btn.reiniciar {
+  background-color: #2100f9;
+  color: #fff;
+}
+
+.btn.detener {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.text-danger {
+  color: #f44336;
+}
